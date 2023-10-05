@@ -22,6 +22,11 @@
             localStorage.setItem("longitud", longitud);
             console.log(latitud);
             console.log(longitud);
+            const latitud = localStorage.getItem("latitud");
+            const longitud = localStorage.getItem("longitud");
+
+            // Envia los datos al documento principal
+        window.parent.postMessage({ latitud, longitud }, "C:\Users\malvarez\OneDrive - Compañía de Distribución y Transporte S.A\Desktop\Desarrollo\Geolocalizacion\main.html");
         } catch (error) {
             switch (error.code) {
                 case error.PERMISSION_DENIED:
