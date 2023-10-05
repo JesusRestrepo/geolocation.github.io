@@ -18,6 +18,8 @@
             var longitud = miposi.coords.longitude;
             $("#ps_lat").val(latitud);
             $("#ps_lon").val(longitud);
+            console.log(latitud);
+            console.log(longitud);
         } catch (error) {
             switch (error.code) {
                 case error.PERMISSION_DENIED:
